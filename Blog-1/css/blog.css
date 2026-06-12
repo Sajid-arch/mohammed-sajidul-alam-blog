@@ -388,7 +388,7 @@ section.heading {
  .text-appear{
     animation: text-appear both;
     animation-timeline: view();
-    animation-range: entry 40% cover 50%;
+    animation-range: entry 10% cover 30%;
  }
 
 @keyframes text-appear{
@@ -411,15 +411,21 @@ section.heading {
 
 
    section.blog{
-    padding: 4rem 0 2rem;
+    padding: 4rem 0 8rem;
    }
 
    div.blog-card{
     border: 2px solid var(--border);
    }
+   div.blog-main .blog-card{
+    border: none;
+   }
 
-   div.blog-card:hover div.blog-img img{
+   div.blog-side div.blog-card:hover div.blog-img img{
     transform: scale(1.05);
+    filter: grayscale(0);
+   }
+   div.blog-main div.blog-card img{
     filter: grayscale(0);
    }
 
@@ -431,6 +437,7 @@ section.heading {
     overflow: clip;
     filter: grayscale(1);
    }
+
 
    div.tag{
     background: var(--progressbar-bg);
@@ -452,20 +459,34 @@ section.heading {
    }
 
 
-   .blog-heading{
-    font-size: 1.5rem;
+   .blog-main .blog-heading{
+    font-size: 2rem;
     font-weight: 700;
     color: var(--header-font-clr);
     line-height: 1.9rem;
     word-break: break-word;
     display: inline;
    }
+   .blog-side .blog-heading{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--header-font-clr);
+    line-height: 1.4rem;
+    word-break: break-word;
+    display: inline;
+   }
 
-   .blog-des{
+   .blog-main .blog-des{
     font-size: 1rem;
     color: var(--description-clr);
     letter-spacing: 1px;
    }
+
+   div.blog-main div.blog-des ul.circle-list{
+    list-style: initial;
+    list-style-type:disc;
+   }
+
 
 
 
